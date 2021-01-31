@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Order } from '../order';
 import { ShopService } from '../shop.service';
 import { ModalDialogService, SimpleModalComponent } from 'ngx-modal-dialog';
+import { MyModalComponent } from '../mymodal/mymodal.component';
 
 @Component({
   selector: 'app-orders',

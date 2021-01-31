@@ -2,8 +2,7 @@ import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { Order } from '../order';
 import { ShopService } from '../shop.service';
-import { ModalDialogService, SimpleModalComponent } from 'ngx-modal-dialog';
-import { MyModalComponent } from '../mymodal/mymodal.component';
+import { ModalDialogService } from 'ngx-modal-dialog';
 
 @Component({
   selector: 'app-orders',
@@ -38,8 +37,7 @@ export class OrdersComponent implements OnInit {
 
   deleteOrder(id) {
     this.modalService.openDialog(this.viewRef, {
-      title: 'Delete',
-      childComponent: SimpleModalComponent,
+      title: 'Delete order',
       data: {
         text: 'Are You sure You want to delete this?'
       },
@@ -56,7 +54,6 @@ export class OrdersComponent implements OnInit {
             resolve(
               this.ss.delete_order(id).subscribe(
                 res => {
-                  alert("deleted");
                   this.commonMethod();
                 },
                 err => {

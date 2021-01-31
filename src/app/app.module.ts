@@ -10,7 +10,6 @@ import { OrdersComponent } from './orders/orders.component';
 import { OrderShowComponent } from './order-show/order-show.component';
 import { FormsModule } from '@angular/forms';
 import { ModalDialogModule } from 'ngx-modal-dialog';
-import { MyModalComponent } from './mymodal/mymodal.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +17,7 @@ import { MyModalComponent } from './mymodal/mymodal.component';
     ProductsComponent,
     ProductShowComponent,
     OrdersComponent,
-    OrderShowComponent,
-    MyModalComponent
+    OrderShowComponent
   ],
   imports: [
     BrowserModule,

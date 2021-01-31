@@ -1,0 +1,23 @@
+<div class="set-margin">
+    <div class="card" style="width: 30rem;">
+        <img class="card-img-top" [src]="product.path" alt="Card image cap" height="400rem">
+        <div class="card-body">
+          <h3 class="card-title">{{ product.product_name }}</h3>
+          <h5 class="card-text">{{ product.price }}</h5>
+          <p class="card-text">{{ product.pcode }}</p>
+          <form class="form-inline" #form="ngForm" (submit)="checkout()">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group mb-2">
+                        <label for="quantity" class="sr-only">Quantity</label>
+                        <input type="number" class="form-control" id="quantity" placeholder="quantity" name="quantity" [(ngModel)]="quantity">
+                      </div>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary mb-2">Checkout</button>
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+</div>

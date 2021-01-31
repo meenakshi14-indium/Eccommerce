@@ -1,0 +1,10 @@
+<div class="set-margin">
+    <div class="card" style="width: 30rem;">
+        <img class="card-img-top" [src]="order.product_path" alt="Card image cap" height="400rem">
+        <div class="card-body">
+          <h1 class="card-title">Product Name: {{ order.product_name }}</h1>
+          <h3 class="card-text">Product Price: {{ order.product_price }} </h3>
+          <h5 class="card-text">Quantity: {{ order.quantity }} - Total Amount: {{ order.quantity * order.product_price }} </h5>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="set-margin">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor="let product of products">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" [src]="product.path" alt="Card image cap" height="500rem">
+                <div class="card-body">
+                  <h5 class="card-title">{{ product.product_name }}</h5>
+                  <p class="card-text">{{ product.price }}</p>
+                  <p class="card-text">{{ product.pcode }}</p>
+                  <button class="btn btn-primary" (click)="productShow(product.id)">Show product</button>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
